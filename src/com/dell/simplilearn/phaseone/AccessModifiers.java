@@ -6,4 +6,8 @@ public class AccessModifiers {
     // Default
     // Protected
     // Public
+
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
 }
