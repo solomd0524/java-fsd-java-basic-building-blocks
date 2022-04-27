@@ -3,7 +3,9 @@ package com.dell.simplilearn.methods;
 public class Hello {
     public static void main(String[] args) {
         System.out.println("hello");
-       /* Student.change();
+
+      /*
+        Student.change();
 
         Student s1 = new Student(111, "Paul");
         Student s2 = new Student(112, "Dave");
@@ -19,12 +21,12 @@ public class Hello {
 
         Shape t = new Triangle();
         t.draw();
-        */
-       /* try {
+
+        try {
             int i = 10/0;
         } catch(ArithmeticException e) {
             System.err.println("Error : " + e.getMessage());
-        }*/
+        }
 
         String s1 = "Hello";
         String s2 = "Hello";
@@ -36,5 +38,25 @@ public class Hello {
         System.out.println(s1.compareTo(s3));
         System.out.println(s1.compareTo(s4));
         System.out.println(s1.compareTo(s5));
+
+        Child child1 =new Child(3);
+        Child child2 =new Child(2);
+        Child child3 =new Child(7);
+        Child child4 =new Child(10);
+        Child child5 =new Child(6);
+        Child child6 =new Child(9);
+        Child child7 =new Child(8);
+
+        List<Child> childs = Arrays.asList(child1, child2, child3, child4, child5, child6, child7);
+        List<Child> filtered = ChildPredicate.filterChilds(childs, ChildPredicate.filterByAge(8));
+        for (Child child:filtered) {
+            System.out.println("filter by age : age = " + child.getAge());
+        }
+
+       */
+
+        HelloRunner r = new HelloRunner();
+        Thread t = new Thread(r);
+        t.start();
     }
 }
