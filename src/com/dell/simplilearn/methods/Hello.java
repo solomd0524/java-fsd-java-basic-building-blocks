@@ -1,5 +1,7 @@
 package com.dell.simplilearn.methods;
 
+import java.util.function.IntBinaryOperator;
+
 public class Hello {
     public static void main(String[] args) {
         System.out.println("hello");
@@ -53,10 +55,28 @@ public class Hello {
             System.out.println("filter by age : age = " + child.getAge());
         }
 
-       */
+
 
         HelloRunner r = new HelloRunner();
         Thread t = new Thread(r);
         t.start();
+
+         */
+
+        Hello m2 = new Hello();
+        m2.operation(Hello::multiply, 22, 22);
+        m2.operation(Hello::add, 130, 25);
+    }
+
+    public static int multiply(int x, int y) {
+        return x * y;
+    }
+
+    public static int add(int x, int y) {
+        return x + y;
+    }
+
+    public void operation(IntBinaryOperator operator, int a, int b) {
+        System.out.println(operator.applyAsInt(a, b));
     }
 }
