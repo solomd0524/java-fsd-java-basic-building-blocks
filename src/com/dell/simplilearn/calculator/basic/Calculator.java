@@ -8,14 +8,18 @@ public class Calculator {
     public static void main(String[] args) {
 
         System.out.println("---------------------------------- \n" + "Basic Calculator \n");
-        System.out.println("1. Addition (+) \n" + "2. Subtraction (-) \n"
-                + "3. Multiplication (* OR x) \n" + "4. Division (/) \n");
+        System.out.println("1. Addition use (+) \n" + "2. Subtraction use (-) \n"
+                + "3. Multiplication use (* OR x) \n" + "4. Division use (/) \n");
 
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("Enter an operator: (+ OR - OR * OR /) ");
             char operation = scanner.next().charAt(0);
 
-            if (!(operation == '+' || operation == '-' || operation == '*' || operation == 'x' || operation == '/')) {
+            if (!(operation == '+'
+                    || operation == '-'
+                    || operation == '*'
+                    || operation == 'x'
+                    || operation == '/')) {
                 System.err.println("Invalid Operator. Please use only + or - or * or /");
             }
 
