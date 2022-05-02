@@ -1,17 +1,21 @@
 package com.dell.simplilearn.methods;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.function.IntBinaryOperator;
 
 public class Hello {
-    public static void main(String[] args) {
-        System.out.println("hello");
 
-      /*
+    public static void main(String[] args) {
+
+        //Class
+        System.out.println("hello");
         Student.change();
 
         Student s1 = new Student(111, "Paul");
         Student s2 = new Student(112, "Dave");
-        Student.college="VJT1";
+
+        Student.college = "VJT1";
         s1.Display();
         s2.Display();
 
@@ -25,43 +29,40 @@ public class Hello {
         t.draw();
 
         try {
-            int i = 10/0;
-        } catch(ArithmeticException e) {
+            int i = 10 / 0;
+        } catch (ArithmeticException e) {
             System.err.println("Error : " + e.getMessage());
         }
 
-        String s1 = "Hello";
-        String s2 = "Hello";
-        String s3 = "Meklo";
-        String s4 = "Hemlo";
-        String s5 = "Flag";
+        String sa = "Hello";
+        String sb = "Hello";
+        String sc = "Meklo";
+        String sd = "Hemlo";
+        String se = "Flag";
 
-        System.out.println(s1.compareTo(s2));
-        System.out.println(s1.compareTo(s3));
-        System.out.println(s1.compareTo(s4));
-        System.out.println(s1.compareTo(s5));
+        System.out.println(sa.compareTo(sb));
+        System.out.println(sb.compareTo(sc));
+        System.out.println(sa.compareTo(sd));
+        System.out.println(sa.compareTo(se));
 
-        Child child1 =new Child(3);
-        Child child2 =new Child(2);
-        Child child3 =new Child(7);
-        Child child4 =new Child(10);
-        Child child5 =new Child(6);
-        Child child6 =new Child(9);
-        Child child7 =new Child(8);
+        Child child1 = new Child(3);
+        Child child2 = new Child(2);
+        Child child3 = new Child(7);
+        Child child4 = new Child(10);
+        Child child5 = new Child(6);
+        Child child6 = new Child(9);
+        Child child7 = new Child(8);
 
         List<Child> childs = Arrays.asList(child1, child2, child3, child4, child5, child6, child7);
         List<Child> filtered = ChildPredicate.filterChilds(childs, ChildPredicate.filterByAge(8));
-        for (Child child:filtered) {
+        for (Child child : filtered) {
             System.out.println("filter by age : age = " + child.getAge());
         }
 
-
-
+        // threads
         HelloRunner r = new HelloRunner();
-        Thread t = new Thread(r);
-        t.start();
-
-         */
+        Thread th = new Thread(r);
+        th.start();
 
         Hello m2 = new Hello();
         m2.operation(Hello::multiply, 22, 22);
