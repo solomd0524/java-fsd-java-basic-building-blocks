@@ -1,4 +1,4 @@
-package com.dell.simplilearn.StringDemo;
+package com.dell.simplilearn.stringdemo;
 
 public class StringDemo {
 
