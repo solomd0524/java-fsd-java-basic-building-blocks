@@ -1,5 +1,7 @@
 package com.dell.simplilearn.methods;
 
+import com.dell.simplilearn.class_object_pillars_java.Employee;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.IntBinaryOperator;
@@ -20,7 +22,6 @@ public class Hello {
         s2.Display();
 
         Employee e1 = new Employee("David Solomon", 1000000F);
-        e1.display();
 
         Shape s = new Rectangle();
         s.draw();

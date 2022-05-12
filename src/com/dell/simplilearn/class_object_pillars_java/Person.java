@@ -1,4 +1,4 @@
-package com.dell.simplilearn.methods;
+package com.dell.simplilearn.class_object_pillars_java;
 
 public class Person {
 

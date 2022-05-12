@@ -1,4 +1,4 @@
-package com.dell.simplilearn.phaseone;
+package com.dell.simplilearn.access_modifiers;
 
 public class DataTypes {
     public static void main(String[] args) {
